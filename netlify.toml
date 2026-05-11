@@ -1,3 +1,9 @@
 [[edge_functions]]
-  path = "/*"
+  path = "/*"      # 匹配所有路径
   function = "proxy"
+
+# 可选：强制将所有流量导向 index.html 以触发 Edge Function
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
